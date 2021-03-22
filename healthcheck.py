@@ -2,17 +2,19 @@ import pandas as pd
 import os
 
 def conv():
-	read_file = pd.read_csv('/****/****/subd.txt')
-	read_file.to_csv (r'/****/****/subd.csv', index=None)
-  
-def impping():
-	with open('/****/****/subd.csv') as imp:
-		for line in imp:
-			res = os.system("ping -c 1 " + line)
-			if res == 0:
-				print(line + ' is alive')
-			else:
-				print(line + ' is dead')
-        
+	read_file = pd.read_csv('/***/***/subd.txt')
+	read_file.to_csv (r'/***/***/subd0.csv', index=None)
 conv()
+
+def impping():
+	lines = []
+	imp = open('/***/***/subd0.csv')
+	#exp = open('/***/***/subd0.txt', 'a')
+	for line in imp:
+		res = os.system("ping -c 2 " + line)
+		if res == 0:
+			lines.append(line + ' is alive')
+		else:
+			lines.append(line + ' is dead')
+	print(lines)
 impping()
