@@ -13,8 +13,8 @@ def impping():
 	for line in imp:
 		res = os.system("ping -c 2 " + line)
 		if res == 0:
-			lines.append(line + ' is alive')
+			lines.append('\n' + line + 'is alive \n')
 		else:
-			lines.append(line + ' is dead')
+			lines.append('\n' + line + 'is dead \n')
 	print(lines)
 impping()
