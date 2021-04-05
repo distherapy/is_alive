@@ -15,6 +15,6 @@ def impping():
 		if res == 0:
 			lines.append('\n' + line + 'is alive \n')
 		else:
-			lines.append('\n' + line + 'is dead \n')
+			pass
 	print(lines)
 impping()
